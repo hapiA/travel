@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<script type="text/javascript">
+			function hintl(){
+				var uname= document.getElementById('uname').value;
+				var pwd1= document.getElementById('pwd1').value;
+				var pwd2=document.getElementById('pwd2').value;
+				var uemail=document.getElementById('email').value;
+				
+				if(uname.length==0){
+					alert("请输入用户名");
+					return false;
+				}
+				if(pwd1.length<6 || pwd1.length>15){
+					alert("密码不能少于6位");
+					return false;
+				}
+				if(pwd1!=pwd2){
+					alert("请确认密码");
+					return false;
+				}
+				if(uemail.length==0){
+					alert("请输入验证码");
+					return false;
+				}
+				return true;
+			}
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<hr style="border: 1px solid #C0C0C0;"/>
+				<div class="col-lg-12" style="box-shadow:0 5px 0px rgba(150, 150, 150, 0.1);">
+					<div class="col-lg-2" align="center" style="line-height: 100px;">
+						<img src="img/timg.jpg" style="width: 150;height: 90px;"/>
+					</div>
+					<div class="col-lg-4" style="line-height:100px;top: 25px;left: -20px;">
+						<h3>欢迎注册</h3>
+					</div>
+					<div class="col-lg-6" style="line-height: 100px;top: 25px;left: 350px;color: #ADADAD;">
+						已有账号？
+						<a href="#" style="color: red;text-decoration:none;">请登入></a>
+					</div>
+				</div>
+			</div>
+			<form role="form" onSubmit="return hintl()">
+					<div class="col-lg-12" align="center" style="top: 40px;">
+							<img src="img/QQ图片202003091040561.png"/>
+							<div style="border:1px solid #C0C0C0;width: 380px;height: 50px;margin-top: 35px;">
+								<h5 style="float: left;margin-left:15px;margin-top: 20px;">用  户  名</h5>
+								<input id="uname" type="text" placeholder="您的账号名和登入名" style="margin-top: 8px;border:none;width: 230px;height: 39px;"/>
+							</div>
+							
+							<div style="border:1px solid #C0C0C0;width: 380px;height: 50px;margin-top: 35px;">
+								<h5 style="float: left;margin-left:15px;margin-top: 20px;">设  置  密  码</h5>
+								<input id="pwd1" type="text" placeholder="建议使用两种或两种以上字符组合" style="margin-top: 8px;border:none;width: 250px;height: 39px;"/>
+							</div>
+							
+							<div style="border:1px solid #C0C0C0;width: 380px;height: 50px;margin-top: 35px;">
+								<h5 style="float: left;margin-left:15px;margin-top: 20px;">确  认  密  码</h5>
+								<input id="pwd2" type="text" placeholder="请再次确认密码" style="margin-top: 8px;border:none;width: 250px;height: 39px;"/>
+							</div>
+							
+							<div style="border:1px solid #C0C0C0;width: 260px;height: 50px;margin-top: 35px;margin-left: -120px;">
+								<h5 style="float: left;margin-left:15px;margin-top: 20px;">邮箱验证码</h5>
+								<input id="email" type="text" placeholder="请输入邮箱验证码" style="margin-top: 8px;border:none;width: 140px;height: 39px;"/>
+							</div>
+							<div style="position: absolute;top: 417px;left: 639px;">
+								<input type="button" value="获取验证码" style="border: 1px solid #C0C0C0;width: 120px;height: 50px;line-height: 50px;background-color: #FFFFFF;"/>
+							</div>
+							
+							<div>
+								<input type="submit" value="立即注册" style="border: none;background-color: #C12E2A;width: 382px;height: 50px;line-height: 50px;margin-top: 35px;color: #FFFFFF;font-size: 15px;"/>
+							</div>
+					</div>
+			</form>
+			<div class="row">
+				<div class="col-lg-6" style="margin-top: 120px;margin-left: 380px;">
+					<span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;<a href="#" style="color: #000000;text-decoration:none;">企业用户注册</a>
+				</div>
+				<div class="col-lg-6" style="margin-left: 655px;margin-top: -20px;">
+					<span class="glyphicon glyphicon-globe"></span>&nbsp;&nbsp;<a href="#" style="color: #000000;text-decoration:none;">海外用户注册</a>
+				</div>
+			</div>
+			<hr />
+		</div>
+	</body>
+</html>
